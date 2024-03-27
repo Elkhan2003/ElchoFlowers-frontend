@@ -1,6 +1,6 @@
 type GetMeResponse = {
-	success: boolean;
-	user: User;
+  success: boolean;
+  user: User;
 };
 
 type GetMeRequest = void;

@@ -1,11 +1,11 @@
-import LayoutPage from './components/layout/LayoutPage';
+import LayoutPage from "./components/layout/LayoutPage";
 
 const App = () => {
-	return (
-		<>
-			<LayoutPage />
-		</>
-	);
+  return (
+    <>
+      <LayoutPage />
+    </>
+  );
 };
 
 export default App;

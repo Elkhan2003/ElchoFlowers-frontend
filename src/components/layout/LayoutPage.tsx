@@ -7,35 +7,35 @@ import { useEffect, useState } from "react";
 import { useGetMeQuery } from "@/src/redux/api/me";
 
 const LayoutPage = () => {
-	const [isPreLoader, setIsPreLoader] = useState(true);
-	const { status } = useGetMeQuery();
+  const [isPreLoader, setIsPreLoader] = useState(true);
+  const { status } = useGetMeQuery();
 
-	useEffect(() => {
-		if (status === "fulfilled" || status === "rejected") {
-			setIsPreLoader(false);
-		}
-	}, [status]);
+  useEffect(() => {
+    if (status === "fulfilled" || status === "rejected") {
+      setIsPreLoader(false);
+    }
+  }, [status]);
 
-	return (
-		<>
-			{isPreLoader ? (
-				<>
-					<h1 className={scss.pre_loader}>Loading...</h1>
-				</>
-			) : (
-				<>
-					<div className={scss.layout}>
-						<Header />
-						<main>
-							<Routes>
-								<Route path="/" element={<HomePage />} />
-							</Routes>
-						</main>
-						<Footer />
-					</div>
-				</>
-			)}
-		</>
-	);
+  return (
+    <>
+      {isPreLoader ? (
+        <>
+          <h1 className={scss.pre_loader}>Loading...</h1>
+        </>
+      ) : (
+        <>
+          <div className={scss.layout}>
+            <Header />
+            <main>
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+              </Routes>
+            </main>
+            <Footer />
+          </div>
+        </>
+      )}
+    </>
+  );
 };
 export default LayoutPage;
