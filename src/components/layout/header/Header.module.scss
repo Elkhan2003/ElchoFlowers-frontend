@@ -1,0 +1,75 @@
+.Header {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 999;
+
+	.scroll {
+		padding-block: 15px;
+		transition: padding 0.5s, background 0.2s;
+
+		@media (max-width: 767px) {
+			padding-block: 0px;
+			backdrop-filter: blur(7px);
+			-webkit-backdrop-filter: blur(7px);
+			box-shadow: 0px 0px 5px #3f3f3f;
+		}
+
+		&.active {
+			padding-block: 0px;
+			backdrop-filter: blur(7px);
+			-webkit-backdrop-filter: blur(7px);
+			box-shadow: 0px 0px 5px #3f3f3f;
+		}
+	}
+
+	.content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.left {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.logo {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+		.right {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			.nav_desktop {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				ul {
+					display: flex;
+					gap: 30px;
+					justify-content: center;
+					align-items: center;
+					li {
+						.link {
+							padding-block: 10px;
+							&.active {
+								color: #9500ff;
+							}
+						}
+					}
+				}
+			}
+			.auth_buttons {
+				margin-left: 30px;
+				.user_name {
+					font-size: 16px;
+				}
+				.user_login {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.pre_loader {
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.layout {
+	overflow: hidden;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 1000vh;
+
+	main {
+		padding-top: 90px;
+	}
+
+	footer {
+		margin-top: auto;
+	}
+}
